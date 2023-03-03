@@ -1,7 +1,12 @@
 //ho creato le stringe e ho dato i valori dentro ogni stringa
 let gridDom = document.getElementById('grid');
+let caselledaSelezionareDom = document.getElementById('casellaSelezione');
+let facileDom = document.getElementById('facile');
+let medioDom = document.getElementById('medio');
+let dificileDom = document.getElementById('dificile');
 
 let domButton = document.querySelector('#playBtn');
+//verifico se 
 
 domButton.addEventListener('click',
      function(){
