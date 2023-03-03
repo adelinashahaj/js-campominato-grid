@@ -1,18 +1,19 @@
 
-const gridDom = document.getElementById('grid');
+let gridDom = document.getElementById('grid');
 
 
-const domButton = document.querySelector('#playBtn');
+let domButton = document.querySelector('#playBtn');
 
 domButton.addEventListener('click',
      function(){
 
         for (let i = 0; i < 100; i++) {
 
-            const currentElement = createNewSquare(i);
+            let currentElement = createNewSquare(i);
         
             currentElement.addEventListener('click', function() {
                 this.classList.toggle('clicked');
+                console.log(i);
                 
             });
             
@@ -21,7 +22,7 @@ domButton.addEventListener('click',
         }
         
         function createNewSquare(numero) {
-            const currentElement = document.createElement('div');
+            let currentElement = document.createElement('div');
             currentElement.classList.add('square');
             currentElement.append(numero);
             return currentElement;
