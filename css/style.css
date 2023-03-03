@@ -70,3 +70,12 @@ main{
 .square.clicked {
     background-color: rgb(235, 155, 155);
 }
+
+
+.casellagioco{
+    display: flex;
+}
+
+select#casellaSelezione {
+    margin-right: 51px;
+}

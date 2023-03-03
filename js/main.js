@@ -6,21 +6,19 @@ let domButton = document.querySelector('#playBtn');
 
 domButton.addEventListener('click',
      function(){
-        gridDom.innerHTML="";
-        for (let i = 1; i < 101; i++) {
+            gridDom.innerHTML="";
+            for (let i = 1; i < 101; i++) {
 
-            let currentElement = createNewSquare(i);
-        
-            currentElement.addEventListener('click', function() {
-                this.classList.toggle('clicked');
-                console.log(i);
-                
-            });
+                let currentElement = createNewSquare(i);
             
-            gridDom.append(currentElement);
-        
-        }
-        
+                currentElement.addEventListener('click', function() {
+                    this.classList.toggle('clicked');
+                    console.log(i);
+                });
+                
+                gridDom.append(currentElement);
+            }
+               
 });
 function createNewSquare(numero) {
     let currentElement = document.createElement('div');
