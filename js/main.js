@@ -6,8 +6,8 @@ let domButton = document.querySelector('#playBtn');
 
 domButton.addEventListener('click',
      function(){
-
-        for (let i = 0; i < 100; i++) {
+        gridDom.innerHTML="";
+        for (let i = 1; i < 101; i++) {
 
             let currentElement = createNewSquare(i);
         
@@ -21,11 +21,11 @@ domButton.addEventListener('click',
         
         }
         
-        function createNewSquare(numero) {
-            let currentElement = document.createElement('div');
-            currentElement.classList.add('square');
-            currentElement.append(numero);
-            return currentElement;
-        
-        }
 });
+function createNewSquare(numero) {
+    let currentElement = document.createElement('div');
+    currentElement.classList.add('square');
+    currentElement.append(numero);
+    return currentElement;
+
+  }

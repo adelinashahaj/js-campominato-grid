@@ -29,9 +29,8 @@ img{
     font-weight: bold;
 }
 header .logo{
-    display: inline-block;
-   
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 .gioco{
     padding: 20px;
@@ -42,6 +41,9 @@ header .logo{
 .footer-bottom{
     width: 100%;
     height: 70px;
+}
+h2 {
+    margin-top: 10px;
 }
 main{
     background-color: rgb(68, 226, 163);
@@ -60,11 +62,11 @@ main{
 .square {
     width: calc(100% / 10);
     height: calc(100% / 10);
-    border: solid 2px #29292b;
+    border: solid 1px #29292b;
     text-align: center;
     padding-top: 20px;
 }
 
 .square.clicked {
-    background-color: indianred;
+    background-color: rgb(235, 155, 155);
 }
