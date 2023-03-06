@@ -64,6 +64,7 @@ domButton.addEventListener('click',
             currentElement.classList.add('square');
             currentElement.append(numero);
             currentElement.classList.add(sizeCaselle);
+           
         
             return currentElement;
         
