@@ -9,7 +9,7 @@ let domButton = document.querySelector('#playBtn');
 
 let valoreGioco = 'facileDom';
 
-caselledaSelezionareDom.addEventListener('click ',
+caselledaSelezionareDom.addEventListener('change',
     function(){
      if(caselledaSelezionareDom.value == 2){
         valoreGioco = 'medioDom';
@@ -64,6 +64,8 @@ domButton.addEventListener('click',
             currentElement.classList.add('square');
             currentElement.append(numero);
             currentElement.classList.add(sizeCaselle);
+            currentElement.style.width = `calc(100% / ${sizeCaselle})`;
+            currentElement.style.height = `calc(100% / ${sizeCaselle})`;
            
         
             return currentElement;
