@@ -6,14 +6,46 @@ let medioDom = document.getElementById('medio');
 let dificileDom = document.getElementById('dificile');
 
 let domButton = document.querySelector('#playBtn');
-//verifico se 
+
+let valoreGioco = 'facileDom';
+
+caselledaSelezionareDom.addEventListener('click ',
+    function(){
+     if(caselledaSelezionareDom.value == 2){
+        valoreGioco = 'medioDom';
+        console.log(valoreGioco);
+     }else if(caselledaSelezionareDom.value == 3){
+        valoreGioco = 'dificileDom';
+        console.log(valoreGioco);
+     }else{
+        valoreGioco = 'facileDom';
+        
+     }
+}
+);
 
 domButton.addEventListener('click',
      function(){
             gridDom.innerHTML="";
-            for (let i = 1; i < 101; i++) {
+            let nrcaselle = "";
+            let sizeCaselle = '';
+            
 
-                let currentElement = createNewSquare(i);
+            if (valoreGioco === 'facileDom'){
+                nrcaselle = 100;
+                sizeCaselle ='easy';
+            }else if (valoreGioco ==='medioDom'){
+                nrcaselle = 81;
+                sizeCaselle ='medium';
+            }else{
+                nrcaselle = 49;
+                sizeCaselle ='hard';
+            }
+            sizeCaselle = Math.sqrt(nrcaselle); 
+
+            for (let i = 1; i <= nrcaselle ; i++) {
+
+                let currentElement = createNewSquare(i,nrcaselle);
             
                 currentElement.addEventListener('click', function() {
                     this.classList.toggle('clicked');
@@ -22,12 +54,18 @@ domButton.addEventListener('click',
                 
                 gridDom.append(currentElement);
             }
-               
-});
-function createNewSquare(numero) {
-    let currentElement = document.createElement('div');
-    currentElement.classList.add('square');
-    currentElement.append(numero);
-    return currentElement;
+           console.log(nrcaselle); 
+           
+           
 
-}
+
+           function createNewSquare(numero) {
+            let currentElement = document.createElement('div');
+            currentElement.classList.add('square');
+            currentElement.append(numero);
+            currentElement.classList.add(sizeCaselle);
+        
+            return currentElement;
+        
+        }
+});
